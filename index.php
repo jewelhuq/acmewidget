@@ -16,21 +16,37 @@ $combinedPricing = new CombinedPricing([$regularPricing, $buyOneGetOneHalfOff]);
 
 
 $cart = new Cart($combinedPricing);
-/*
-// Add products to the cart
-$cart->addProductToCart("B01");
-$cart->addProductToCart("B01");
-$cart->addProductToCart("R01");
-$cart->addProductToCart("R01");
-$cart->addProductToCart("R01");
-*/
-
 $cart->addProductToCart("B01");
 $cart->addProductToCart("G01");
-
-
-// Calculate total price
 $totalPrice = $cart->calculateTotalPrice();
-
-// Output total price
 echo "Total Price: $totalPrice\n";
+
+
+
+$cart = new Cart($combinedPricing);
+$cart->addProductToCart("R01");
+$cart->addProductToCart("R01");
+$totalPrice = $cart->calculateTotalPrice();
+echo "Total Price: $totalPrice\n";
+
+
+
+
+$cart = new Cart($combinedPricing);
+$cart->addProductToCart("R01");
+$cart->addProductToCart("G01");
+$totalPrice = $cart->calculateTotalPrice();
+echo "Total Price: $totalPrice\n";
+
+
+$cart = new Cart($combinedPricing);
+$cart->addProductToCart("B01");
+$cart->addProductToCart("B01");
+$cart->addProductToCart("R01");
+$cart->addProductToCart("R01");
+$cart->addProductToCart("R01");
+$totalPrice = $cart->calculateTotalPrice();
+echo "Total Price: $totalPrice\n";
+
+
+
